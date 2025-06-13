@@ -3,7 +3,6 @@ package com.colruytgroup.vakteam.springtraining.repositories;
 import com.colruytgroup.vakteam.springtraining.model.User;
 
 import java.util.List;
-import java.util.function.Predicate;
 
 public class UserInMemoryRepository implements UserRepository {
     private static final List<User> USERS = List.of(

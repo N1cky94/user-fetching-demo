@@ -1,7 +1,6 @@
 package com.colruytgroup.vakteam.springtraining.services;
 
 import com.colruytgroup.vakteam.springtraining.model.User;
-import com.colruytgroup.vakteam.springtraining.repositories.UserInMemoryRepository;
 import com.colruytgroup.vakteam.springtraining.repositories.UserRepository;
 import com.colruytgroup.vakteam.springtraining.services.commands.ChangeUserPasswordCommand;
 

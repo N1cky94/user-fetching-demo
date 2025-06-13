@@ -1,8 +1,8 @@
 package com.colruytgroup.vakteam.springtraining.controllers;
 
 import com.colruytgroup.vakteam.springtraining.model.dto.UserInfoDto;
-import com.colruytgroup.vakteam.springtraining.services.UserInMemoryService;
 import com.colruytgroup.vakteam.springtraining.services.UserService;
+import com.colruytgroup.vakteam.springtraining.services.commands.ChangeUserPasswordCommand;
 
 public class UserRestController implements UserController {
     private UserService service;
@@ -12,17 +12,17 @@ public class UserRestController implements UserController {
     }
 
     @Override
-    public void requestPrintUserById() {
+    public void requestPrintUserById(long id) {
 
     }
 
     @Override
-    public UserInfoDto requestUserById() {
+    public UserInfoDto requestUserById(long id) {
         return null;
     }
 
     @Override
-    public void resetPassword() {
+    public void resetPassword(ChangeUserPasswordCommand command) {
 
     }
 }
