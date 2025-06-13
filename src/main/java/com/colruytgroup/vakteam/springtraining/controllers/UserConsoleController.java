@@ -4,11 +4,7 @@ import com.colruytgroup.vakteam.springtraining.model.dto.UserInfoDto;
 import com.colruytgroup.vakteam.springtraining.services.UserService;
 import com.colruytgroup.vakteam.springtraining.services.commands.ChangeUserPasswordCommand;
 
-import java.util.Scanner;
-
 public class UserConsoleController implements UserController {
-    private static final Scanner KEYBOARD = new Scanner(System.in);
-
     private UserService service;
 
     public UserConsoleController(UserService service) {
