@@ -3,16 +3,16 @@ package com.colruytgroup.vakteam.springtraining.views;
 import com.colruytgroup.vakteam.springtraining.controllers.UserController;
 import com.colruytgroup.vakteam.springtraining.model.dto.UserInfoDto;
 import com.colruytgroup.vakteam.springtraining.services.commands.ChangeUserPasswordCommand;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
+@Component
+@RequiredArgsConstructor
 public class UserView {
     private static final Scanner KEYBOARD = new Scanner(System.in);
-    private UserController controller;
-
-    public UserView(UserController controller) {
-        this.controller = controller;
-    }
+    private final UserController controller;
 
     public void show() {
         System.out.println("Provide a user ID of a user you want to print");

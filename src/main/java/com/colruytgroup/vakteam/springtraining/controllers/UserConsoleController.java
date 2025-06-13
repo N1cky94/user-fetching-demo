@@ -3,13 +3,13 @@ package com.colruytgroup.vakteam.springtraining.controllers;
 import com.colruytgroup.vakteam.springtraining.model.dto.UserInfoDto;
 import com.colruytgroup.vakteam.springtraining.services.UserService;
 import com.colruytgroup.vakteam.springtraining.services.commands.ChangeUserPasswordCommand;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 public class UserConsoleController implements UserController {
-    private UserService service;
-
-    public UserConsoleController(UserService service) {
-        this.service = service;
-    }
+    private final UserService service;
 
     @Override
     public void requestPrintUserById(long id) {

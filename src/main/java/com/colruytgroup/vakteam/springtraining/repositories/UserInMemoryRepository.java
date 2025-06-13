@@ -1,9 +1,11 @@
 package com.colruytgroup.vakteam.springtraining.repositories;
 
 import com.colruytgroup.vakteam.springtraining.model.User;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class UserInMemoryRepository implements UserRepository {
     private static final List<User> USERS = List.of(
             new User(0l, "Nick", "hello1!", "nick@cgi.be"),

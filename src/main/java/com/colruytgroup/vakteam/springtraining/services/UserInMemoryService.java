@@ -3,15 +3,15 @@ package com.colruytgroup.vakteam.springtraining.services;
 import com.colruytgroup.vakteam.springtraining.model.User;
 import com.colruytgroup.vakteam.springtraining.repositories.UserRepository;
 import com.colruytgroup.vakteam.springtraining.services.commands.ChangeUserPasswordCommand;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
+@Component
+@RequiredArgsConstructor
 public class UserInMemoryService implements UserService {
-    private UserRepository repository;
-
-    public UserInMemoryService(UserRepository repository) {
-        this.repository = repository;
-    }
+    private final UserRepository repository;
 
     public void printAllUsersWithId(long id) {
         User user = repository.findUserById(id);
